@@ -1,2 +1,9 @@
 node_modules
 .idea
+server
+src
+package.json
+package-lock.json
+webpack.config.js
+public
+.babelrc
