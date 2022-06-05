@@ -1,0 +1,234 @@
+
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+  src: url('./fonts/Montserrat-Regular.woff') format('woff'),
+  url('./fonts/Montserrat-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 100px;
+}
+
+:root {
+  --color-wildsand: #f4f4f4;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-eminence: #662d91;
+  --color-eucalyptus: #4fd1c5;
+  --color-gray: #858585;
+  --color-tundora: #454545;
+  --color-bright-turquoise: #00ffcb;
+  --color-background:  #45454552;
+  --color-main-title: #11d9b0;
+  --color-backgr-img: rgba(48,45,45, 0.59);
+  --color-profile-btns-background: #625656;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  /*overflow-anchor: none;*/
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.btn-reset {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.swiper-container {
+  height: 544px;
+  background-color:  var(--color-background);
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.2;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 25px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 15px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 40px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-white);
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  position: relative;
+  background-color: var(--color-black);
+  opacity: 1;
+}
+
+
+
+.swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-white);
+  transform: translate(-50%, -50%);
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 25px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 15px;
+}
+
+.swiper-pagination-bullet {
+  margin: 0 40px;
+  width: 6px;
+  height: 6px;
+  background: var(--color-white);
+  opacity: 0.7;
+}
+
+
+.swiper-pagination-bullet-active {
+  position: relative;
+  background-color: var(--color-black);
+  opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;
+  height: 52px !important;
+  margin-top: 0 !important;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.swiper-button-next {
+  right: 44px !important;
+  transform: translate(50%, -50%);
+  background-image: url(./img/svg/right-chevron.svg);
+}
+
+.swiper-button-prev {
+  left: 44px !important;
+  transform: rotate(180deg) translate(50%, 50%);
+  background-image: url(./img/svg/right-chevron.svg);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+ opacity: 1;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  content: '' !important;
+}
+
+@media(max-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex;
+  }
+}
+
+
+
+
+@media(max-width: 576px) {
+  .swiper-container {
+    height: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+

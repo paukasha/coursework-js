@@ -1,0 +1,141 @@
+.fullPhotoWrapper {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 5;
+  margin-bottom: 20px;
+}
+
+.fullPhotoInfo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 10px 20px;
+  height: 80px;
+  background-color:  rgb(82 73 73 / 60%);
+  opacity: 0;
+  /*z-index: 10;*/
+  /*opacity: 1;*/
+  z-index: 15;
+  transition: opacity .4s ease-in-out;
+  color: var(--color-white);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.fullPhotoDescr  span {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.fullPhotoDescr {
+  line-height: 24px;
+}
+
+.fullPhotoDescr:not(:last-child) {
+  margin-right: 60px;
+}
+
+.fullPhotoDescr:last-child {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.fullPhotoDescr:last-child > span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  opacity: 0.6;
+  transition: opacity .3s linear;
+}
+/*.fullPhotoInfo > span:last-child {*/
+/*  margin-left: auto;*/
+/*}*/
+:global(.photoLike) {
+  width: initial !important;
+  padding: 0 5px;
+  z-index: 20;
+}
+
+:global(.photoLike) {
+  position: relative;
+  width: 40px;
+  height: 26px;
+  opacity: 0.6;
+  z-index: 20;
+  color: var(--color-black);
+  font-size: 16px;
+}
+
+.fullPhotoLikeBlock:hover span {
+  transition: opacity .3s linear;
+  opacity: 1;
+}
+
+.fullPhotoLikeBlock:hover :global(.photoLike) {
+  transition: opacity .3s linear;
+  opacity: 1;
+}
+
+.fullPhotoWrapper:hover > .fullPhotoInfo {
+  opacity: 1;
+  z-index: 15;
+  transition: opacity .4s ease-in-out;
+}
+
+.backBtn {
+  margin-bottom: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  color:  var(--color-eminence);
+  padding: 6px 10px;
+  transition: color  .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.backBtn:hover {
+  background-color: var(--color-eminence);
+  color: var(--color-white);
+  transition: color  .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+
+@media(max-width: 768px) {
+  .fullPhotoInfo,
+  .fullPhotoLikeBlock :global(.photoLike){
+    opacity: 1;
+  }
+
+  .fullPhotoInfo {
+    align-items: flex-start;
+    height: 60px;
+  }
+
+  .fullPhotoDescr {
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  .fullPhotoDescr span{
+    font-size: 12px;
+  }
+  .fullPhotoDescr:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .fullPhotoDescr a,
+  .dateOfCreated{
+    font-size: 12px;
+  }
+
+
+}
+
+@media(max-width: 576px) {
+  .backBtn {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+}
