@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "homepage": "https://paukasha.github.io/coursework-js",
   "scripts": {
     "start": "npm run build && node server/index.js",
     "dev": "NODE_ENV=development webpack serve --config webpack.config.js",

@@ -7,7 +7,7 @@ import {setPhotos} from '../mainPageReducer';
 let oauthUrl = 'https://unsplash.com/oauth/token',
   client_id = 'avGYLy8xj-R8I3tiRSkeVZvRV0R39Ws34mZod3qn3Zo',
   client_secret = '5mvRrbXVYQDCpa7fYclguxWgFypVpz5ByKxI4CMAHoA',
-  redirect_uri = 'http://localhost:3001/',
+  redirect_uri = 'https://paukasha.github.io/coursework-js/',
   code = '',
   grant_type = 'authorization_code',
   scope = 'public+read_user+write_user+read_photos+write_photos+write_likes+write_followers+read_collections+write_collections',

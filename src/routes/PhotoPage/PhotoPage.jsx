@@ -1,24 +1,20 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import st from './photoPage.m.css';
-import like from '../../img/svg/heart.svg';
-import {useParams, useNavigate, useSearchParams, useLocation} from 'react-router-dom';
-import axios from 'axios';
-import {dateFormat} from '@/helpers/dateFormat';
+import {useParams, useNavigate} from 'react-router-dom';
 import Like from '../../components/Like/Like';
 import {useDispatch, useSelector} from 'react-redux';
-import {setCurrentPhoto, setIsLoading} from '../../redux/authReducer';
 import {getCurrentPhoto} from '../../redux/actions/auth';
 
 const PhotoPage = () => {
-  let {photoId} = useParams();
-  const dispatch = useDispatch()
+  const {photoId} = useParams(),
+         dispatch = useDispatch(),
+         navigate = useNavigate();
 
-  const navigate = useNavigate();
-  const isAuth = useSelector(state => state.user.isAuth)
+  const currentPhoto = useSelector(state => state.user.currentPhoto);
+  const data =  currentPhoto?.promoted_at?.split('T')[0].split('-').reverse().join('.');
+
   const goBack = () => { navigate(-1)}
 
-  const currentPhoto = useSelector(state => state.user.currentPhoto)
-  let data =  currentPhoto?.promoted_at?.split('T')[0].split('-').reverse().join('.')
   useEffect(() => {
     dispatch(getCurrentPhoto(photoId))
 

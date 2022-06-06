@@ -22,7 +22,7 @@ const App = () => {
   const codeSearchParam = searchParams.get('code')
 
   useEffect(() => {
-    dispatch(auth(codeSearchParam, () => navigate('/photos'), {replace: true}))
+    dispatch(auth(codeSearchParam, () => navigate('/coursework-js/photos'), {replace: true}))
     dispatch(getLocation())
     dispatch(getPhotos())
   }, [])
@@ -30,13 +30,13 @@ const App = () => {
 
   return (<>
       <Routes>
-        <Route path="/" element={<Layout/>}>
+        <Route path="/coursework-js" element={<Layout/>}>
           <Route index element={<MainPage/>}/>
-          <Route path="photos" element={<PrivateAuth>
+          <Route path="coursework-js/photos" element={<PrivateAuth>
             <ProfileContent/>
           </PrivateAuth>}/>
 
-          <Route path="photos/:photoId" element={<PrivateAuth>
+          <Route path="coursework-js/photos/:photoId" element={<PrivateAuth>
             <PhotoPage/>
           </PrivateAuth>}/>
           <Route path="*" element={<NotFound/>}/>

@@ -18,12 +18,12 @@ const Profile = () => {
   const goToProfile = (e) => {
     e.stopPropagation();
     setProfileBtnsShow(false);
-    navigate('photos');
+    navigate('/coursework-js/photos');
   }
 
   const goOut = () => {
     dispatch(logout())
-    navigate('/')
+    navigate('/coursework-js/')
   }
 
 

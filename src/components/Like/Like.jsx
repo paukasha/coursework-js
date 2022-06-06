@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './like.m.css';
 import like from '@/img/svg/heart.svg';
 import {setOrDeleteLikeByUser} from '../../redux/actions/auth';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 const Like = ({currentPhoto}) => {
-  const dispatch = useDispatch()
-  let setLikeClassName = ''
+  const dispatch = useDispatch();
+  let setLikeClassName = '';
   if (currentPhoto.liked_by_user) {
     setLikeClassName += 'likeByUser'
   }

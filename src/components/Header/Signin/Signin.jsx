@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import st from './signin.m.css';
 import {unsplashAuthLink} from '@/redux/actions/auth.js'
 

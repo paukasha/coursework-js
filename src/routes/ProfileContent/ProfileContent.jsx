@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import st from './profileContent.m.css'
 
 
 import {useDispatch, useSelector} from 'react-redux';
-import axios from 'axios';
 import Photo from '@/components/Photo/Photo';
-import {useLocation, useNavigate} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import {getUserPhoto} from '../../redux/actions/auth';
 import {setIsLoading} from '../../redux/authReducer';
 
